@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html translate="no" data-dpr="1" style="font-size: 44.64px">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="robots" content="noindex,nofollow" />
+  <meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" name="viewport" />
+  <title>Royal-Game</title>
+  <script src="/js/block.js"></script>
+  <link rel="stylesheet" href="/css/bet/wingo/main.css" />
+  <link rel="stylesheet" href="/css/bet/wingo/chunk-4e7d3985.25c9d2c0.css" />
+  <link rel="stylesheet" href="/css/bet/wingo/chunk-4e7d3985.25c9d2c1.css" />
+  <link rel="stylesheet" href="/css/bet/wingo/chunk-4e7d3985.25c9d2c2.css" />
+  <link rel="stylesheet" href="/css/bet/wingo/chunk-4e7d3985.25c9d2c3.css" />
+  <link rel="stylesheet" href="/css/bet/wingo/chunk-4e7d3985.25c9d2c4.css" />
+  <link rel="shortcut icon" href="/images/bitbug_favicon.ico" type="image/x-icon">
+  <style>
+    html,
+    body {
+      height: 100%;
+      width: 100%;
+      background-color: #9195a3;
+      padding: 0;
+      margin: 0;
+    }
+
+    .block-click {
+      pointer-events: none;
+    }
+
+        .WinningTip__C-body.isL[data-v-2be1e250] {
+        background-image: url(	/assets/png/missningLBg-73e02111.png);
+    }
+    .WinningTip__C-body[data-v-2be1e250] {
+        position: absolute;
+        width: 7.73333rem;
+        height: 10.93333rem;
+        background-image: url(/assets/png/missningBg-6f17b242.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        transform: translate(-50%) translateY(-50%);
+        padding-top: 3.33333rem;
+    }
+    html, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+        padding: 0;
+        margin: 0;
+        font: inherit;
+        font-size: 100%;
+        vertical-align: baseline;
+        border: 0;
+    }
+    
+    * {
+        box-sizing: border-box;
+        font-family: bahnschrift;
+    }
+    :root {
+        --van-picker-confirm-action-color: #ff9901;
+        --van-calendar-range-edge-background: #ff9901;
+        --van-button-primary-background: #ff9901;
+        --van-button-primary-border-color: #ff9901;
+        --van-calendar-range-middle-color: #ff9901;
+    }
+    .WinningTip__C-body-l1[data-v-2be1e250] {
+        font-weight: 700;
+        font-size: .64rem;
+        text-align: center;
+        color: #fff;
+        height: 0.77333rem;
+        line-height: .77333rem;
+        margin-bottom: 0.90667rem;
+    }
+    .WinningTip__C-body-l2.type2>div[data-v-2be1e250], .WinningTip__C-body-l2.type4>div[data-v-2be1e250], .WinningTip__C-body-l2.type6>div[data-v-2be1e250], .WinningTip__C-body-l2.type8>div[data-v-2be1e250] {
+        background-color: #eb8a1f;
+    }
+    
+    .WinningTip__C-body-l2>div[data-v-2be1e250]:first-child {
+        margin-left: 0.32rem;
+    }
+    .WinningTip__C-body-l2[data-v-2be1e250] {
+        height: 0.58667rem;
+        line-height: .58667rem;
+        display: -webkit-box;
+        display: -webkit-flex;
+        color: #fff;
+        font-size: .29333rem;
+        padding-left: 0.72rem;
+        display: flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+        margin-bottom: 0.90667rem;
+    }
+    .WinningTip__C-body-l2.type2>div[data-v-2be1e250], .WinningTip__C-body-l2.type4>div[data-v-2be1e250], .WinningTip__C-body-l2.type6>div[data-v-2be1e250], .WinningTip__C-body-l2.type8>div[data-v-2be1e250] {
+        background-color: #eb8a1f;
+    }
+    .WinningTip__C-body-l2>div.WinningNum[data-v-2be1e250] {
+        width: 0.53333rem;
+        height: 0.53333rem;
+        line-height: .53333rem;
+        margin: 0 0.18667rem;
+        padding: 0;
+        text-align: center;
+        border-radius: 50%;
+    }
+    .WinningTip__C-body-l2>div[data-v-2be1e250] {
+        height: 0.58667rem;
+        background: #40ad72;
+        border-radius: 0.13333rem;
+        padding: 0 0.32rem;
+    }
+    .WinningTip__C-body-l3 .isLose[data-v-2be1e250] {
+        font-weight: 700;
+        font-size: .64rem;
+        line-height: .77333rem;
+        color: #587ba4;
+        text-align: center;
+        margin-bottom: 0.34667rem;
+        padding-top: 0.4rem;
+    }
+    .WinningTip__C-body-l3 .gameDetail[data-v-2be1e250] {
+        height: 0.37333rem;
+        line-height: .37333rem;
+        font-size: .29333rem;
+        text-align: center;
+        color: #6b6b6b;
+    }
+    .WinningTip__C-body-l4 .acitveBtn[data-v-2be1e250] {
+        height: 0.56rem;
+        width: 0.56rem;
+        border-radius: 50%;
+        background: rgba(255,255,255,.26);
+        border: 0.01333rem solid #ffffff;
+        margin-right: 0.18667rem;
+        position: relative;
+    }
+    .WinningTip__C-body-l4[data-v-2be1e250] {
+        height: 0.64rem;
+        line-height: .64rem;
+        font-size: .32rem;
+        color: #fff;
+        position: absolute;
+        left: 0.74667rem;
+        bottom: 0.74667rem;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+    .WinningTip__C-body-l3 .bonus[data-v-2be1e250] {
+    height: 0.64rem;
+    line-height: .64rem;
+    font-weight: 700;
+    font-size: .53333rem;
+    color: #f54a32;
+    text-align: center;
+    margin-bottom: 0.26667rem;
+}
+.WinningTip__C-body-l3 .head[data-v-2be1e250] {
+    height: 0.4rem;
+    line-height: .4rem;
+    font-weight: 700;
+    font-size: .34667rem;
+    color: #f54a32;
+    text-align: center;
+    margin-bottom: 0.10667rem;
+}
+.WinningTip__C[data-v-2be1e250] {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background-color: #00000070;
+    top: 0;
+    left: 0;
+}
+.WinningTip__C .closeBtn[data-v-2be1e250] {
+    width: 0.8rem;
+    height: 0.8rem;
+    background-image: url(/assets/png/close-84ce5e6a.png);
+    background-repeat: no-repeat;
+    background-size: 0.8rem;
+    background-position: center;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%) translateY(100%);
+    transform: translate(-50%) translateY(100%);
+    bottom: -0.26667rem;
+}
+        </style>
+</head>
+
+<body style="font-size: 12px">
+  <div id="app">
+    <div data-v-a9660e98="" class="mian game">
+      <div data-v-106b99c8="" data-v-a9660e98="" class="navbar">
+        <div data-v-106b99c8="" class="navbar-left" onclick="location.href='/home'">
+          <div data-v-a9660e98="" data-v-106b99c8="" class="c-row c-row-middle-center">
+            <img data-v-a9660e98="" data-v-106b99c8="" src="/images/back.c3244ab0.png" class="navbar-back" />
+          </div>
+        </div>
+       
+        <div data-v-106b99c8="" class="navbar-right">
+          <div data-v-a9660e98="" data-v-106b99c8="" class="c-row navbarR">
+            <div data-v-a9660e98="" data-v-106b99c8="" class="c-row item c-row-middle-center" onclick="location.href='/keFuMenu'">
+              <img data-v-a9660e98="" data-v-106b99c8="" src="/images/audio.webp" class="item-audio" />
+            </div>
+            <div data-v-a9660e98="" data-v-106b99c8="" class="c-row item c-row-middle-center">
+              <img data-v-a9660e98="" data-v-106b99c8="" src="/images/volume-up-line.webp" class="item-volume" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!---------->
+      <%- include('element/info.ejs') -%>
+      <!---------->
+      <div data-v-a9660e98="" class="game-betting">
+        <div data-v-a9660e98="" class="tab">
+          <%- include('element/e_tab_time.ejs') -%>
+        </div>
+        <div data-v-a9660e98="" class="content">
+          <div data-v-a9660e98="" class="time-box c-row c-row-between m-b-10">
+            <div data-v-a9660e98="" class="info">
+              <div data-v-a9660e98="" class="txt"> Period</div>
+              <div data-v-a9660e98="" class="number">2022062610925</div>
+            </div>
+            <div data-v-a9660e98="" class="out">
+              <div data-v-a9660e98="" class="txt">
+                Time Left
+              </div>
+              <div data-v-a9660e98="" class="number c-row c-row-middle c-flew-end">
+                <div data-v-a9660e98="" class="item">0</div>
+                <div data-v-a9660e98="" class="item">0</div>
+                <div data-v-a9660e98="" class="item c-row c-row-middle">
+                  :
+                </div>
+                <div data-v-a9660e98="" class="item">0</div>
+                <div data-v-a9660e98="" class="item">0</div>
+              </div>
+            </div>
+          </div>
+          <%- include('element/e_bet.ejs') -%>
+        </div>
+      </div>
+      <div data-v-a9660e98="" class="game-list p-b-20">
+        <%- include('element/list-order.ejs') -%>
+        <%- include('element/join.ejs') -%>
+
+      </div>
+      <!---->
+      <!---->
+      <!---->
+      <div data-v-a9660e98="" id="moveBox" class="moveBox" style="display: none">
+        <div data-v-a9660e98="" class="moveHead c-row c-row-between c-row-middle">
+          <div data-v-a9660e98="" class="close">Close</div>
+          <div data-v-a9660e98="">
+            <span data-v-a9660e98="">Full Screen</span>
+          </div>
+        </div>
+        <div data-v-a9660e98="" class="long">
+          <div data-v-a9660e98="" class="van-tabs van-tabs--line">
+            <div class="van-tabs__wrap van-hairline--top-bottom">
+              <div role="tablist" class="van-tabs__nav van-tabs__nav--line">
+                <div role="tab" aria-selected="true" class="van-tab van-tab--active">
+                  <span class="van-tab__text van-tab__text--ellipsis">Bệt rồng mới nhất</span>
+                </div>
+                <div role="tab" class="van-tab">
+                  <span class="van-tab__text van-tab__text--ellipsis">My Bets</span>
+                </div>
+                <div class="van-tabs__line"></div>
+              </div>
+            </div>
+            <div class="van-tabs__content">
+              <div data-v-a9660e98="" role="tabpanel" class="van-tab__pane" style="">
+                <div data-v-a9660e98="" class="longlist"></div>
+              </div>
+              <div data-v-a9660e98="" role="tabpanel" class="van-tab__pane" style="display: none">
+                <!---->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-v-a9660e98="" id="sipachp">
+        <!-- <audio data-v-a9660e98="" id="voice1" muted="muted">
+                        <source data-v-a9660e98="" src="/audio/di1.da40b233.mp3" type="audio/mpeg" />
+                    </audio>
+                    <audio data-v-a9660e98="" id="voice2" muted="muted">
+                        <source data-v-a9660e98="" src="/audio/di2.317de251.mp3" type="audio/mpeg" />
+                    </audio> -->
+      </div>
+      <div data-v-a9660e98="" class="popup-qt van-popup van-popup--center" style="width: 80%; border-radius: 10px; max-width: 340px; z-index: 2040;display: none;">
+        <div data-v-a9660e98="" class="rule-box">
+          <div data-v-a9660e98="" class="title c-row c-row-middle-center">Pre-Selling Rules</div>
+          <div data-v-a9660e98="" class="info">
+            <div data-v-a9660e98="" class="comment"> To protect users' rights - legitimate interests
+               participate in the pre-sale and maintain the normal operating sequence of the pre-sale, the rules
+               rules developed under the agreement in accordance with the relevant agreements and rules of
+               national laws and regulations.  Chapter 1 Definition1.1 Definition of presale: refer to
+               A sales model in which a seller offers a bundle of products or services to collect orders
+               Consumer ordering through pre-sale and delivery product tools
+               goods and services to the seller as agreed in advance.  1.2 The pre-sale model is the "Signed ." model
+               "Deposit" is referred to as a fixed amount of pre-sold goods
+               available.  The "deposit" can participate in mini games and have a chance to win a lot
+               profit.  Deposits can be exchanged directly for goods but the deposit amount
+               Not for exchange.1.3 Pre-sale products: Products provided by the seller
+               By using the pre-sale product tool, only pre-sale words are highlighted on the
+               the title or on the product detail page, in addition other products do not use
+               Pre-sale product tools are not pre-sale products.1.4 Pre-sale system:
+               Access to the system of product tools provided to support sales by selling model
+               before.  1.5 Pre-sale goods price: is the price of goods before sale.  The price of the goods
+               Pre-sale consists of two parts: selling price and payment. </div>
+            <div data-v-a9660e98="" class="rule-btn c-row m-t-20 c-row-center">
+              <button data-v-a9660e98="" class="btn van-button van-button--default van-button--normal van-button--block van-button--round" style="color: rgb(255, 255, 255); background: rgb(242, 65, 59); border-color: rgb(242, 65, 59);">
+                <div data-v-a9660e98="" class="van-button__content">
+                  <span data-v-a9660e98="" class="van-button__text">
+                    <span data-v-a9660e98="">I know</span>
+                  </span>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- POP-UP MODAL -->
+      <div data-v-2be1e250="" id="winpopid" data-v-b67ac651="" class="WinningTip__C" style="display:none">
+    <div data-v-2be1e250="" class="WinningTip__C-body">
+        <div data-v-2be1e250="" class="WinningTip__C-body-l1">Congratulations</div>
+        <div data-v-2be1e250="" class="WinningTip__C-body-l2 type2">
+            Lottery Results
+          <div data-v-2be1e250="">RED</div>
+          <div data-v-2be1e250="" class="WinningNum">2</div>
+          <div data-v-2be1e250="">SMALL</div>
+        </div>
+        <div data-v-2be1e250="" class="WinningTip__C-body-l3">
+          <div data-v-2be1e250="" class="head">WIN</div>
+          <div data-v-2be1e250="" class="bonus">₹1.96</div>
+          <div data-v-2be1e250="" class="gameDetail">
+            Issue:1 minute 20240211011169
+          </div>
+        </div>
+        <div data-v-2be1e250="" class="WinningTip__C-body-l4">
+          <div data-v-2be1e250="" class="acitveBtn"></div>
+          3s Auto Stop
+        </div>
+        <div data-v-2be1e250="" class="closeBtn"></div>
+      </div>
+      </div><div data-v-2be1e250="" data-v-b67ac651="" class="WinningTip__C" style="display:none">
+      <div data-v-2be1e250="" class="WinningTip__C-body isL">
+        <div data-v-2be1e250="" class="WinningTip__C-body-l1 isL">Sorry</div>
+        <div data-v-2be1e250="" class="WinningTip__C-body-l2 type6">
+            Lottery Results
+          <div data-v-2be1e250="">RED</div>
+          <div data-v-2be1e250="" class="WinningNum">6</div>
+          <div data-v-2be1e250="">BIG</div>
+        </div>
+        <div data-v-2be1e250="" class="WinningTip__C-body-l3">
+          <div data-v-2be1e250="" class="isLose">Lose</div>
+          <div data-v-2be1e250="" class="gameDetail">
+            Issue:1 minute 20240211011129
+          </div>
+        </div>
+        <div data-v-2be1e250="" class="WinningTip__C-body-l4">
+          <div data-v-2be1e250="" class="acitveBtn"></div>
+          3s Auto Stop
+        </div>
+        <div data-v-2be1e250=""  class="closeBtn"></div>
+      </div></div>
+      
+      <%- include('element/alert.ejs') -%>
+    </div>
+    <div data-v-7692a079="" data-v-a9660e98="" class="Loading c-row c-row-middle-center">
+      <div data-v-7692a079="" class="van-loading van-loading--circular">
+        <span data-v-7692a079="" class="van-loading__spinner van-loading__spinner--circular" style="color: rgb(242, 65, 59);">
+          <svg data-v-7692a079="" viewBox="25 25 50 50" class="van-loading__circular">
+            <circle data-v-7692a079="" cx="50" cy="50" r="20" fill="none"></circle>
+          </svg>
+        </span>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="/js/client.js"></script>
+  <script src="https://cdn.socket.io/4.4.1/socket.io.min.js" integrity="sha384-fKnu0iswBIqkjxrhQCTZ7qlLHOFEgNkRmK2vaO/LbTZSXdJfAu6ewRBdwHPhBo/H" crossorigin="anonymous"></script>
+  <script src="/js/wingo1.js"></script>
+  <script>
+  $(".closeBtn").on("click",function(){
+   $(".WinningTip__C").css("display","none");
+  });
+  </script>
+</body>
+
+</html>
